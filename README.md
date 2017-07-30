@@ -4,7 +4,7 @@ This project is part of the Front-End Developer Nanodegree program at Udacity.co
 
 ### Project Review
 
-**Using [Node.js](https://nodejs.org/), [Gulp](https://www.npmjs.com/package/gulp) has been used as a build tool to minify the CSS and JavaScript.** 
+**Using [Node.js](https://nodejs.org/), [Gulp](https://www.npmjs.com/package/gulp) has been utilized as a build tool to migrate the files to the ```dist``` directory and to minify the CSS and JavaScript.** 
 
 The source files for the project are contained in `frontend-nanodegree-mobile-portfolio/app` and a working, post-task-runner, build of the project may be reviewed in `frontend-nanodegree-mobile-portfolio/dist`. 
 
