@@ -1,6 +1,6 @@
 ## Website Performance Optimization portfolio project
 
-This project is part of the Front-End Developer Nanodegree program at Udacity.com. This online example portfolio has been optimized for speed using information from Google Developer Tools. The `index.html` has been tested for performance for mobile using [Google' Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). Optimizations have ben made to  `app/views/js/main.js` and `views/pizza.html` to achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`.  
+This project is part of the Front-End Developer Nanodegree program at Udacity.com. This online example portfolio has been optimized for speed using information from Google Developer Tools. The `index.html` has been tested for performance for mobile using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). Optimizations have been made to  `app/views/js/main.js` and `views/pizza.html` to achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`.  
 
 ### Project Review
 
@@ -16,12 +16,10 @@ frontend-nanodegree-mobile-portfolio
 |--package.json
 ```
 
-#### Installation
-
-**The steps necessary to download, configure and implement Gulp (the task runner) on the reviewer's desktop are outlined below:**
-
 
 ### Getting started
+
+**The steps necessary to download, configure and implement Gulp (the task runner) on the reviewer's desktop are outlined below:**
 
 1. If you have Node.js installed on your machine you can install Gulp globally on your workstation using the following command:
 
