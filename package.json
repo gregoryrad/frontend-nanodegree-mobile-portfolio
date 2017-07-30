@@ -1,0 +1,19 @@
+{
+  "name": "frontend-nanodegree-mobile-portfolio",
+  "version": "1.0.0",
+  "description": "(Website optimization project for the Udacity Front-end Web App Developer Nanodegree)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregoryrad/frontend-nanodegree-mobile-portfolio.git"
+  },
+  "author": "Gregory Radcliffe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregoryrad/frontend-nanodegree-mobile-portfolio/issues"
+  },
+  "homepage": "https://github.com/gregoryrad/frontend-nanodegree-mobile-portfolio#readme"
+}
