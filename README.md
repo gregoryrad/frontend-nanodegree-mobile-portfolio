@@ -1,8 +1,14 @@
 ## Website Performance Optimization portfolio project
 
-This project is part of the Front-End Developer Nanodegree program at Udacity.com. This online example portfolio has been optimized for speed using information from Google Developer Tools. The `index.html` has been tested for performance for mobile using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). Optimizations have been made to  `app/views/js/main.js` and `views/pizza.html` to achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`.  
+This project is part of the Front-End Developer Nanodegree program at Udacity.com. This online example portfolio has been optimized for performance using information from Google Developer Tools. 
 
-### Project Review
+The `index.html` has been optimized to achieve a PageSpeed Score of at least 90 for mobile and desktop using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). 
+
+#### Optimizations
+Optimizations have been made to `app/views/js/main.js` and `views/pizza.html` to remove Jank and achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`. The performance improvements for the size slider were achieved by refactoring the ```changePizzaSizes()``` function. Performance improvements to the scrolling were achieved by making edits to the ```updatePositions()``` function.
+
+
+#### Build tool and task-runner
 
 **Using [Node.js](https://nodejs.org/), [Gulp](https://www.npmjs.com/package/gulp) has been utilized as a build tool to migrate the files to the ```dist``` directory and to minify the CSS and JavaScript.** 
 
@@ -17,7 +23,7 @@ frontend-nanodegree-mobile-portfolio
 ```
 
 
-### Getting started
+#### Getting started
 
 **The steps necessary to download, configure and implement Gulp (the task runner) on the reviewer's desktop are outlined below:**
 
@@ -47,7 +53,7 @@ $ npm install --save-dev gulp-uglify gulp-clean-css
 $ gulp
 ```
 
-### Running the app on a local server
+#### Running the app on a local server
 
 1. To inspect the site on a smartphone, you may set up the app to run on a local server
 
