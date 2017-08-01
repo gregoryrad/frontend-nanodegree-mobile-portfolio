@@ -1,18 +1,23 @@
 ## Website Performance Optimization portfolio project
 
-This project is part of the Front-End Developer Nanodegree program at Udacity.com. This online example portfolio has been optimized for performance using information from Google Developer Tools. 
-
-The `index.html` has been optimized to achieve a PageSpeed Score of at least 90 for mobile and desktop using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). 
+This project is part of the Front-End Developer Nanodegree program at Udacity.com. This online example portfolio has been optimized for performance using information from Google Developer Tools.
 
 #### Optimizations
+
+The `index.html` has been optimized to achieve a PageSpeed Score of at least 90 for mobile and desktop using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). The following improvements were made:
+
+* Inlined Critical Path CSS into the ```<header>```
+* Moved link elements to the bottom of the body
+* Optimized Profile and pizzaria images
+
 Optimizations have been made to `app/views/js/main.js` and `views/pizza.html` to remove Jank and achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`. The performance improvements for the size slider were achieved by refactoring the ```changePizzaSizes()``` function. Performance improvements to the scrolling were achieved by making edits to the ```updatePositions()``` function.
 
 
 #### Build tool and task-runner
 
-**Using [Node.js](https://nodejs.org/), [Gulp](https://www.npmjs.com/package/gulp) has been utilized as a build tool to migrate the files to the ```dist``` directory and to minify the CSS and JavaScript.** 
+**Using [Node.js](https://nodejs.org/), [Gulp](https://www.npmjs.com/package/gulp) has been utilized as a build tool to migrate the files to the ```dist``` directory and to minify the CSS and JavaScript.**
 
-The source files for the project are contained in `frontend-nanodegree-mobile-portfolio/app` and a working, post-task-runner, build of the project may be reviewed in `frontend-nanodegree-mobile-portfolio/dist`. 
+The source files for the project are contained in `frontend-nanodegree-mobile-portfolio/app` and a working, post-task-runner, build of the project may be reviewed in `frontend-nanodegree-mobile-portfolio/dist`.
 
 ```
 frontend-nanodegree-mobile-portfolio
@@ -33,7 +38,7 @@ frontend-nanodegree-mobile-portfolio
 $ npm install -g gulp
 ```
 
-2. You will then need to clone this GitHub repository to a local directory. 
+2. You will then need to clone this GitHub repository to a local directory.
 3. Next navigate to the project directory and install the ```node_modules``` folder and the necessary modules for ```gulpfile.js``` to use
 
 ```bash
