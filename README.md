@@ -2,19 +2,29 @@
 
 This project is part of the Front-End Developer Nanodegree program at Udacity.com. This online example portfolio has been optimized for performance using information from Google Developer Tools.
 
-#### Optimizations
+### Optimizations
 
-The `index.html` has been optimized to achieve a PageSpeed Score of at least 90 for mobile and desktop using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). The following improvements were made:
+**Performance improvements to the home page:**
+
+The `index.html` has been optimized to achieve a PageSpeed Score of at least 90 for mobile and desktop using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). The following improvements were made to avoid render blocking:
 
 * Inlined Critical Path CSS into the ```<header>``` and the full CSS was moved out of the ```<header>```, to the end of the page, just before the closing body tag
 * Javascript link elements were also moved out of the ```<header>```, to the end of the page, just before the closing body tag and the ```async``` attribute was applied where needed
-* Used webfont loader to defer the loading of the Google Web fonts
-* Optimized Profile and pizzaria images
+* webfont loader was used to defer the loading of the Google Web fonts
+* The profile and pizzaria images were optimized to improve load times
 
-Optimizations have been made to `app/views/js/main.js` and `views/pizza.html` to remove Jank and achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`. The performance improvements for the size slider were achieved by refactoring the ```changePizzaSizes()``` function. Performance improvements to the scrolling were achieved by making edits to the ```updatePositions()``` function.
+**Performance improvements to the pizza page:**
+
+Optimizations have been made to `app/views/js/main.js` and `views/pizza.html` to remove Jank and achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`. The performance improvements for the size slider were achieved by:
+* Refactored the ```changePizzaSizes()``` function.
+
+Performance improvements to the scrolling were achieved by:
+* Reduced the numner of pizzas that appeared on the page.
+* Enabled hardware acceleration by editing the class selector ```.mover``` in ```main.js```, adding ```backface-visibility: hidden;``` and adding ```transform: translateZ(0);``` to trigger the GPU
+* foo
 
 
-#### Build tool and task-runner
+### Build tool and task-runner
 
 **Using [Node.js](https://nodejs.org/), [Gulp](https://www.npmjs.com/package/gulp) has been utilized as a build tool to migrate the files to the ```dist``` directory and to minify the CSS and JavaScript.**
 
