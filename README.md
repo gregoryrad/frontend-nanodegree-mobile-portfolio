@@ -6,8 +6,9 @@ This project is part of the Front-End Developer Nanodegree program at Udacity.co
 
 The `index.html` has been optimized to achieve a PageSpeed Score of at least 90 for mobile and desktop using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). The following improvements were made:
 
-* Inlined Critical Path CSS into the ```<header>```
-* Moved link elements to the bottom of the body
+* Inlined Critical Path CSS into the ```<header>``` and the full CSS was moved out of the ```<header>```, to the end of the page, just before the closing body tag
+* Javascript link elements were also moved out of the ```<header>```, to the end of the page, just before the closing body tag and the ```async``` attribute was applied where needed
+* Used webfont loader to defer the loading of the Google Web fonts
 * Optimized Profile and pizzaria images
 
 Optimizations have been made to `app/views/js/main.js` and `views/pizza.html` to remove Jank and achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`. The performance improvements for the size slider were achieved by refactoring the ```changePizzaSizes()``` function. Performance improvements to the scrolling were achieved by making edits to the ```updatePositions()``` function.
