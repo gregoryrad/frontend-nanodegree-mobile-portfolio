@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
 	uglify = require('gulp-uglify'), // minifies javascript
-	// rename = require('gulp-rename'), //renames files
-	minifyCSS = require('gulp-clean-css'); // minifies css
+	minifyCSS = require('gulp-clean-css'), // minifies css
+	autoprefixer = require('gulp-autoprefixer'); // adds vendor prefixes
 
 
 gulp.task('scripts', function(){
@@ -52,6 +52,15 @@ gulp.task('viewImages', function(){
 		.pipe(gulp.dest('dist/views/images'))
 });
 
+gulp.task('autoprefixer', () =>
+    gulp.src('app/views/css/*.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist/views/css'))
+);
+
 gulp.task('watch', function(){ //watches specifies directories for changes
 	gulp.watch('app/js/*.js', ['scripts']);
 	gulp.watch('app/views/js/*.js', ['viewScripts']);
@@ -62,4 +71,4 @@ gulp.task('watch', function(){ //watches specifies directories for changes
 	gulp.watch('app/views/images/*.*', ['viewImages']);
 });
 
-gulp.task('default', ['scripts', 'viewScripts', 'styles', 'viewStyles', 'pages', 'viewPages', 'images', 'viewImages', 'watch']);
+gulp.task('default', ['scripts', 'viewScripts', 'styles', 'viewStyles', 'pages', 'viewPages', 'images', 'viewImages', 'autoprefixer', 'watch']);
