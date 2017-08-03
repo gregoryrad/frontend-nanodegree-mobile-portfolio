@@ -8,20 +8,25 @@ This project was completed as part of the Front-End Developer Nanodegree program
 
 The `index.html` has been optimized to achieve a PageSpeed Score of at least 90 for mobile and desktop using [Google's Page Speed insights](https://developers.google.com/speed/pagespeed/insights/). The following improvements were made to avoid render blocking:
 
-* Inlined Critical Path CSS into the `<header>` and moved the full CSS out of the `<header>`, to the end of the page, just before the closing `<body>` tag
+* Inlined the Critical Path CSS into the `<header>` and moved the full CSS out of the `<header>`, to the end of the page, just before the closing `<body>` tag
 * Javascript `<link>` elements were also moved out of the `<header>`, to the end of the page, just before the closing body tag and the `async` attribute was applied where needed
 * The webfont loader script was applied to defer the loading of the Google Web fonts required
 * The profile and pizzaria images were optimized to improve load times
 
 **Performance improvements to the Pizza page:**
 
-Optimizations have been made to `app/views/js/main.js` and `views/pizza.html` to remove Jank and achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` as shown in the developer tools when using the pizza slider on `views/pizza.html`. The performance improvements for the size slider were achieved by:
+Optimizations have been made to `app/views/js/main.js` and `views/pizza.html` to avoid Forced Synchronous Layout and removing Jank in order to achieve a consistent framerate of under `60fps` when scrolling the page and less than `5ms` (as shown in the developer tools) when using the pizza slider on `views/pizza.html`.
 
-* Refactoring the `changePizzaSizes()` function.
+The performance improvements for the size slider were achieved by:
+
+* Using DRY methods by creating a variable to avoid multiple query selectors and thereby avoid querying the DOM mutiple times.
+* Refactoring the `changePizzaSizes()` function to determine the width and then sets the width for each element to a percentage
+* Changed querySelector to getElementsByClassName("randomPizzaContainer") to improve Web API call
 
 Performance improvements to the scrolling were achieved by:
+
 * Reduced the number of pizzas that appeared on the page.
-* Enabled hardware acceleration by editing the class selector `.mover` in `main.js`, adding `backface-visibility: hidden;` and adding `transform: translateZ(0);` to trigger the GPU. Included `gulp-autoprefixer` to add vendor prefixes to the build
+* Enabled hardware acceleration by editing the `.mover` class selector in `main.js` by adding `backface-visibility: hidden;` and adding `transform: translateZ(0);` to trigger the GPU. Also, included `gulp-autoprefixer` to add vendor prefixes to the build for these edits.
 * foo
 
 
