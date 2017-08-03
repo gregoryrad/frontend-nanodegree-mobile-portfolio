@@ -516,8 +516,13 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 24; i++) {
-    var elem = document.createElement('img');
+  //Calculate the number of rows
+  var rows = window.screen.height / s;
+  rows = rows * cols;
+  //declares the 'elem' variable in the instantiation of the loop and sets
+  //the number of rows as the condition to evaluate against
+  for (var i = 0, elem; i < rows; i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
