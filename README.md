@@ -22,15 +22,15 @@ The performance improvements for the size slider were achieved by:
 * Using DRY methods by creating a variable to avoid multiple query selectors and thereby avoiding querying the DOM mutiple times.
 * Refactoring the `changePizzaSizes()` function to determine the width and then sets the width for each element to a percentage
 * Saving the array length in the `changePizzaSizes()` function to a local variable, thereby the array's length property is not accessed to check its value at each iteration of the loop
-* Declaring the pizzasDiv variable in the `changePizzaSizes()` function outside the loop for efficiency
+* Declaring the `pizzasDiv` variable in the `changePizzaSizes()` function outside the loop for efficiency
 * Changing query selectors in `changeSliderLabel()` to `getElementById()` to improve the Web API call
 
 
 Performance improvements to the scrolling were achieved by:
 
 * Enabling hardware acceleration by editing the `.mover` class selector in `main.js` by adding `backface-visibility: hidden;` and adding `transform: translateZ(0);` to trigger the GPU. Also, included `gulp-autoprefixer` to add vendor prefixes to the build for these edits.
-* Changed querySelector to getElementsByClassName in the `updatedPositions()` function to improve the Web API call
-* Assign a variable outside the loop in the `updatedPositions()` function and declaring the variable for 'phase' and assigning a variable 'len' to the items length...placing both in the condition statement to avoid iteration
+* Changed the query selector to `getElementsByClassName` in the `updatedPositions()` function to improve the Web API call
+* Assign a variable outside the loop in the `updatedPositions()` function and declaring the variable for `phase` and assigning a variable `len` to the items length...placing both in the condition statement to avoid iteration
 * Dynamically calculating the number of rows needed to fill the screen with pizza images based on the viewport height and resolution.
 * Assigning a variable outside the loop replacing a query selector with `getElementById()` to improve the Web API call
 
@@ -62,7 +62,7 @@ $ npm install -g gulp
 ```
 
 2. You will then need to clone this GitHub repository to a local directory.
-3. Next navigate to the project directory and install the `node_modules` folder and the necessary modules for `gulpfile.js` to use
+3. Next navigate to the local project directory and install the `node_modules` folder and necessary modules for `gulpfile.js` to use
 
 ```bash
 $ cd /path/to/the-project-folder
