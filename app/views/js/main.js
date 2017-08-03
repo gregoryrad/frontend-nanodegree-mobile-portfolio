@@ -441,9 +441,9 @@ var resizePizzas = function(size) {
 // saves the query selector to a variable to avoid repeating code
     //changed querySelector to getElementsByClassName("randomPizzaContainer") to improve Web API call
     var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
-    console.log(randomPizzas);
-
-    for (var i = 0; i < randomPizzas.length; i++) {
+    //declaring a variable for the randomPizzas length's property outside the loop
+    var randomPizzaLength = randomPizzas.length
+    for (var i = 0; i < randomPizzaLength; i++) {
       randomPizzas[i].style.width = newWidth + '%';
     }
   }

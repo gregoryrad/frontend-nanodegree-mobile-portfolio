@@ -19,14 +19,17 @@ Optimizations have been made to `app/views/js/main.js` and `views/pizza.html` to
 
 The performance improvements for the size slider were achieved by:
 
-* Using DRY methods by creating a variable to avoid multiple query selectors and thereby avoid querying the DOM mutiple times.
+* Using DRY methods by creating a variable to avoid multiple query selectors and thereby avoiding querying the DOM mutiple times.
 * Refactoring the `changePizzaSizes()` function to determine the width and then sets the width for each element to a percentage
+* Saving the array length in the the `changePizzaSizes()` function to a local variable, thereby the array's length property is not accessed to check its value at each iteration of the loop
 * Changing query selectors in `changeSliderLabel()` to `getElementById()` to improve the Web API call
+
 
 Performance improvements to the scrolling were achieved by:
 
-* Enabled hardware acceleration by editing the `.mover` class selector in `main.js` by adding `backface-visibility: hidden;` and adding `transform: translateZ(0);` to trigger the GPU. Also, included `gulp-autoprefixer` to add vendor prefixes to the build for these edits.
-* Dynamically calculated the number of rows needed to fill the screen with pizza images based on the viewport height and resolution.
+* Enabling hardware acceleration by editing the `.mover` class selector in `main.js` by adding `backface-visibility: hidden;` and adding `transform: translateZ(0);` to trigger the GPU. Also, included `gulp-autoprefixer` to add vendor prefixes to the build for these edits.
+* Dynamically calculating the number of rows needed to fill the screen with pizza images based on the viewport height and resolution.
+
 
 
 ### Build tool and task-runner
